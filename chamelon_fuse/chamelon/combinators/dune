@@ -1,0 +1,4 @@
+(library
+ (name mirage_block_combinators_modified)
+ (libraries mirage_block_unix_modified lwt cstruct io-page logs)
+ (wrapped false))

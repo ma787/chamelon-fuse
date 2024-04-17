@@ -1,0 +1,10 @@
+(executable
+  (name test_chamelon)
+  (libraries alcotest cstruct chamelon)
+)
+(rule
+  (alias runtest)
+  (action
+    (run ./test_chamelon.exe)
+  )
+)

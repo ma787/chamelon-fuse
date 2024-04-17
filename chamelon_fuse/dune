@@ -1,0 +1,4 @@
+(executable
+  (name chamelon_fuse)
+  (libraries bos cmdliner chamelon.posix mirage-kv chamelon.mirage_block_unix_modified mirage-clock-unix ocamlfuse logs-syslog.lwt)
+)

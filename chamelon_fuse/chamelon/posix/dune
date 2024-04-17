@@ -1,0 +1,10 @@
+(library
+  (public_name chamelon.posix)
+  (name posix)
+  (instrumentation (backend bisect_ppx))
+  (libraries fmt digestif chamelon chamelon.mirage_block_unix_modified mirage-clock mirage-kv mirage-logs chamelon.mirage_lib chamelon.kv logs-syslog.lwt lwt)
+)
+(env
+  (dev
+    (flags (:standard -warn-error -A))))
+ 
