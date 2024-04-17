@@ -3,7 +3,7 @@ open Logs_syslog_lwt
 open Mirage_lib
 
 let root_pair = (0L, 1L)
-let image = "/home/mohamed/Project/ocamlfuse-2.7.1_cvs8/_build/default/chamelon_fuse/chamelon/src/image.img"
+let image = "./_build/default/chamelon_fuse/chamelon/src/image.img"
 let block_size = 512
 
 module Make(Sectors : Mirage_block.S)(Clock : Mirage_clock.PCLOCK) = struct
