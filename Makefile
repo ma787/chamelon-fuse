@@ -14,8 +14,11 @@ clean:
 	@dune clean
 	
 chamelon_fuse:
-	@dune build chamelon_fuse/hello.exe
 	@dune build chamelon_fuse/chamelon_fuse.exe
+	
+example:
+	@dune build example/hello.exe
+	@dune build example/fusexmp.exe
 
-.PHONY: build install uninstall clean chamelon_fuse
+.PHONY: build install uninstall clean chamelon_fuse example
 

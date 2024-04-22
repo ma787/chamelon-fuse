@@ -546,8 +546,7 @@ module Make(Sectors: Mirage_block.S)(Clock : Mirage_clock.PCLOCK) = struct
       (* finally, the recursive bit: when we've successfully found or made a directory
        * but we have more components in the path,
        * find or make the next component relative to the juts-returned blockpair *)
-      find_or_mkdir t parent_blockpair dirname >>= fun newpair ->
-      mkdir t newpair more
+      find_or_mkdir t parent_blockpair dirname >>= fun newpair -> mkdir t newpair more
 
   module File_read : sig
     val get : t -> Mirage_kv.Key.t -> (string, error) result Lwt.t
