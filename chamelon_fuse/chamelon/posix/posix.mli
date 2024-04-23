@@ -15,13 +15,11 @@ module Make(Sectors: Mirage_block.S)(Clock : Mirage_clock.PCLOCK) : sig
 
     val mkdir : string -> int -> (unit, Mirage_kv.write_error) result Lwt.t
     val remove : string -> unit Lwt.t
-    val readdir : string -> Unix.file_descr -> ((string * [`Dictionary | `Value]) list, Mirage_kv.error) result Lwt.t
+    val readdir : string -> ((string * [`Dictionary | `Value]) list, Mirage_kv.error) result Lwt.t
     val statfs : string -> statvfs Lwt.t
     val stat : string -> Cstruct.t Lwt.t
-    val flush : string -> Unix.file_descr -> (unit, [> `write_error]) result Lwt.t
-    val read : string -> Unix.file_descr -> (string * int) Lwt.t
-    val write : string -> Unix.file_descr -> string -> (unit, Mirage_kv.write_error) result Lwt.t
+    val read : string -> (string * int) Lwt.t
+    val write : string -> string -> (unit, Mirage_kv.write_error) result Lwt.t
     val fopen : string -> Lwt_unix.file_descr option Lwt.t
-    val release : string -> unit Lwt.t
-    val mknod : string -> int -> (unit, [> `write_error]) result Lwt.t
+    val mknod : string -> unit Lwt.t
 end 
