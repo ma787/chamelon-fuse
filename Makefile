@@ -15,8 +15,5 @@ example:
 	@dune build example/hello.exe
 	@dune build example/fusexmp.exe
 
-chamelon:
-	@dune build chamelon/fuse/fuse.exe
-
-.PHONY: build install uninstall clean example chamelon
+.PHONY: build install uninstall clean example
 
