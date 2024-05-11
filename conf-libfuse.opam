@@ -9,7 +9,7 @@ license: "LGPL-2.1-only"
 homepage: "https://github.com/libfuse/libfuse"
 bug-reports: "https://github.com/ocaml/opam-repository/issues"
 depends: [
-  "dune" {>= "3.7"}
+  "dune" {>= "2.9"}
   "conf-pkg-config" {build}
   "odoc" {with-doc}
 ]
