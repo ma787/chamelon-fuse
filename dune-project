@@ -1,4 +1,4 @@
-(lang dune 3.7)
+(lang dune 2.9)
 
 (generate_opam_files true)
 
@@ -19,7 +19,6 @@
  (homepage "https://github.com/libfuse/libfuse")
  (bug_reports "https://github.com/ocaml/opam-repository/issues")
  (license "LGPL-2.1-only")
- (allow_empty)
  (depends
   ("conf-pkg-config" :build)))
 

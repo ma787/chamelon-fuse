@@ -1,8 +1,6 @@
 
 build:
 	@dune build @install
-	dd if=/dev/zero of="_build/default/chamelon_fuse/chamelon/src/image.img" bs=64K count=4000
-	_build/default/chamelon_fuse/chamelon/src/chamelon.exe format "_build/default/chamelon_fuse/chamelon/src/image.img" 512
 
 install: build
 	@dune install
@@ -12,13 +10,13 @@ uninstall: build
 
 clean:
 	@dune clean
-	
-chamelon_fuse:
-	@dune build chamelon_fuse/chamelon_fuse.exe
-	
+
 example:
 	@dune build example/hello.exe
 	@dune build example/fusexmp.exe
 
-.PHONY: build install uninstall clean chamelon_fuse example
+chamelon:
+	@dune build chamelon/fuse/fuse.exe
+
+.PHONY: build install uninstall clean example chamelon
 

@@ -1,6 +1,0 @@
-(library
-  (public_name chamelon)
-  (libraries checkseum cstruct ptime)
-  (instrumentation (backend bisect_ppx))
-  (preprocess (pps ppx_cstruct))
-)

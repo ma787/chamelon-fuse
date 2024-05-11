@@ -17,7 +17,7 @@ authors: [
 license: "GPL-1.0-or-later"
 bug-reports: "https://github.com/astrada/ocamlfuse/issues"
 depends: [
-  "dune" {>= "3.7"}
+  "dune" {>= "2.9"}
   "ocaml" {>= "4.02.3"}
   "base-bigarray"
   "base-threads"
@@ -36,6 +36,7 @@ build: [
     name
     "-j"
     jobs
+    "--promote-install-files=false"
     "@install"
     "@runtest" {with-test}
     "@doc" {with-doc}
@@ -43,5 +44,4 @@ build: [
 ]
 dev-repo: "git+https://github.com/astrada/ocamlfuse.git"
 homepage: "http://sourceforge.net/apps/mediawiki/ocamlfuse"
-available: [ os != "oraclelinux-9" & os != "freebsd" ]
 x-ci-accept-failures: ["oraclelinux-7"]
