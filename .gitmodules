@@ -1,0 +1,3 @@
+[submodule "chamelon"]
+	path = chamelon
+	url = https://github.com/ma787/chamelon
